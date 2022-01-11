@@ -1,0 +1,261 @@
+ @import url('https://fonts.googleapis.com/css2?family=B612:wght@400;700&display=swap');
+
+
+
+ /*RESET*/
+ * {
+     box-sizing: border-box;
+     padding: 0px;
+     margin: 0px;
+
+
+ }
+
+ ul,
+ ol {
+     list-style: none;
+ }
+
+ a {
+     text-decoration: none;
+ }
+
+ img {
+     height: auto;
+ }
+
+ button,
+ input,
+ textarea {
+     border: 0;
+     outline: none;
+ }
+
+ button:focus,
+ input:focus,
+ textarea:focus {
+     border: 0;
+     outline: none;
+ }
+
+ /*VARIAVEIS*/
+ :root {
+     --yellow-color: #FFA800;
+     --blue-color: #0072D2;
+     --white-color: #FFFFFF;
+     --dark-color: #131318;
+ }
+
+ /* ##GERAIS */
+ button {
+     padding: 15px 30px;
+     font-weight: 700;
+     color: var(--white-color);
+ }
+
+
+ /* ##BODY */
+ body {
+     font-family: 'B612', sans-serif;
+     height: 100vh;
+     background-image: url('../assets/img/background.svg');
+     background-position: center center;
+     background-size: cover;
+     background-attachment: fixed;
+     color: var(--white-color);
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+     overflow: hidden;
+ }
+
+ /* ##EFEITO GLASS NO WALLPAPER */
+ body::before {
+     content: '';
+     width: 100vw;
+     height: 100vh;
+     background-color: rgba(0, 0, 0, 0.7);
+     background-size: cover;
+     background-attachment: fixed;
+     position: absolute;
+     z-index: -1;
+ }
+
+ /* ##HEADER */
+ header {
+     padding-top: 50px;
+ }
+
+ .title {
+     font-size: 100px;
+     padding-top: 40px;
+ }
+
+ /* ##MAIN | SECTION*/
+ main {
+     position: relative;
+     padding-bottom: 110px;
+
+ }
+
+ main section {
+     display: flex;
+     width: 60%;
+     margin: 0 auto;
+     gap: 75px;
+
+ }
+
+ .container-content {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+
+     height: 270px;
+     width: 100%;
+ }
+
+
+ .movie-info {
+     display: flex;
+     align-items: center;
+     flex-wrap: wrap;
+ }
+
+ .movie-info>* {
+     padding-right: 100px;
+
+ }
+
+ .movie-hour {
+     display: flex;
+     align-items: center;
+     font-weight: 700;
+     font-size: 1.2rem;
+ }
+
+ .movie-hour :nth-child(1) {
+     padding-right: 15px;
+ }
+
+ .movie-year {
+     font-weight: 600;
+     font-size: 1.2rem;
+ }
+
+ .btn-blue {
+     background-color: var(--blue-color);
+     margin-right: 20px;
+ }
+
+ .btn-dark {
+     background-color: var(--dark-color);
+     border: 1px solid var(--white-color);
+ }
+
+ /* ##SVGS */
+
+
+ .yellowSvg {
+     fill: var(--yellow-color);
+     fill-opacity: 1;
+     stroke: none;
+ }
+
+ .normalSvg {
+     fill: white;
+     fill-opacity: 0.5;
+     stroke: white;
+ }
+
+ /* ##MEDIA RESPONSIVE QUERIES */
+ @media(max-width:420px) {
+     .container-content>* {
+         padding-top: 20px;
+     }
+
+     .movie-buttons :nth-child(2) {
+         margin-top: 20px;
+         margin-bottom: 20px;
+     }
+
+
+     .container-content {
+         height: 370px;
+     }
+ }
+
+ @media(max-width:560px) {
+     .container-content {
+         padding: 0px 15px;
+         text-align: justify;
+         width: 100vw;
+     }
+
+     .container-image {
+         display: none;
+     }
+
+     .movie-info {
+         justify-content: center;
+         align-items: center;
+     }
+
+     .movie-info>* {
+         padding-right: 20px;
+
+     }
+
+
+
+     main section {
+         width: 100vw;
+     }
+ }
+
+ @media(max-width:955px) {
+     .container-content {
+         padding: 0px 15px;
+         text-align: justify;
+
+     }
+
+     .movie-average {}
+
+     .movie-info>* {
+         padding-right: 20px;
+
+     }
+
+     .movie-info {
+
+         align-items: center;
+     }
+
+     .movie-buttons {
+         text-align: center;
+     }
+
+     main section {
+         width: 100vw;
+     }
+
+     .container-image {
+         display: none;
+     }
+
+ }
+
+ @media(max-width: 1145px) {
+     .movie-info>* {
+         padding-right: 20px;
+
+     }
+ }
+
+ @media(max-width:1526px) {
+     main section {
+         width: 80vw;
+     }
+ }
